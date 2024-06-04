@@ -13,8 +13,14 @@
   border: 1px solid grey;
   border-radius: 20px;
   display: flex;
+  flex-direction: column;
 }
 
 h1{
   text-align: center;
+}
+
+input {
+  width: 200px;
+  margin-left: 10px;
 }
