@@ -1,7 +1,8 @@
 import { useState } from 'react'
 import './App.css'
-import Title from './components/title'
-import GeneralInformation from './components/generalInformation'
+import Title from './components/Title'
+import GeneralInformation from './components/GeneralInformation'
+import EducationalExperience from './components/EducationalExperience'
 
 function App() {
   return (
@@ -10,6 +11,7 @@ function App() {
     <div className='page'>
       <div className='parts'>
         <GeneralInformation/>
+        <EducationalExperience/>
       </div>
       <div className='parts'></div>
     </div>

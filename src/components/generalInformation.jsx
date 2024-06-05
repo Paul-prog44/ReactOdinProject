@@ -1,12 +1,14 @@
+import Input from "./Input"
+
 function GeneralInformation() {
     return (
         <>
             <h2>Informations générales</h2>
-            <p>Nom :<input name="name"/></p>
-            <p>Prénom :<input name="lastname"/></p>
-            <p>Numéro de téléphone :<input name="phone"/></p>
-            <p>Adresse :<input name="address"/></p>
-            <p>Adresse éléctronique :<input name="emailAddress"/></p>
+            <Input name="name" label="Nom"/>
+            <Input name="lastname" label="Nom de famille"/>
+            <Input name="phone" label="Numéro de téléphone"/>
+            <Input name="address" label="Adresse"/>
+            <Input name="emailAddress" label="Adresse éléctronique"/>
         </>
     )
 }
