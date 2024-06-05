@@ -1,22 +1,6 @@
-import { useState } from "react";
 import Input from "./Input";
 
-function PracticalExperience() {
-    const [workExperience, setWorkExperience] = useState({
-        positionTitle:"",
-        company:"",
-        tasks:"",
-        startYear:"",
-        endYear:""
-    })
-
-    //fonction de gestion de changement
-    const handleChange = (field, value) => {
-        setWorkExperience(prevState => ({
-            ...prevState,
-            [field]:value
-        }))
-    }
+function PracticalExperience({workExperience, handleChange}) {
 
     return (
         <>
