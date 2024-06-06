@@ -1,11 +1,16 @@
-
-function PracticalExperienceDisplay({workExperience}) {
+function PracticalExperienceDisplay({workExperiences}) {
     return (
         <>
-           <p>{workExperience.positionTitle}</p>
-           <p>{workExperience.company}</p>
-           <p>{workExperience.tasks}</p>
-           <p>{workExperience.startYear ? workExperience.startYear + "-" + workExperience.endYear : ""}</p>
+            <ul>
+                {workExperiences.map(item => (
+                    <>
+                        <li>{item.positionTitle}</li>
+                        <p>{item.company}</p>
+                        <p>{item.startYear + " - " + item.endYear}</p>
+                        <p>{item.tasks}</p>
+                    </>
+                ))}
+           </ul>
 
         </>
     )

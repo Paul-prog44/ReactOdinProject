@@ -17,6 +17,13 @@ function App() {
     setFormations([...formations, education])
   }
 
+  //Tableau de stockage des expériences pro
+  const [workExperiences, setWorkExperiences] = useState([])
+
+  //Ajouter un nouvel obejt workExperience
+  const addWorkExperience = () => {
+    setWorkExperiences([...workExperiences, workExperience])
+  }
 
   //General information
   const [generalInformation, setGeneralInformation] = useState({
@@ -76,13 +83,14 @@ function App() {
         <EducationalExperience education={education} handleChange={handleChange}/>
         <button onClick={addFormation}>Ajouter une formation</button>
         <PracticalExperience workExperience={workExperience} handleChange={handleChangeExperience}/>
+        <button onClick={addWorkExperience}>Ajouter une expérience professionnelle</button>
       </div>
       <div className='parts'>
         <GeneralInformationDisplay generalInformation={generalInformation}/>
         <h3>Education et formation</h3>
         <EducationalExperienceDisplay formations={formations}/>
         <h3>Expériences professionnelles</h3>
-        <PracticalExperienceDisplay workExperience={workExperience}/>
+        <PracticalExperienceDisplay workExperiences={workExperiences}/>
       </div>
     </div>
     </>
