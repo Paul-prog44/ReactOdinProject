@@ -6,6 +6,7 @@ import EducationalExperience from './components/EducationalExperience.jsx'
 import PracticalExperience from './components/PracticalExperience.jsx'
 import GeneralInformationDisplay from './components/GeneralInformationDisplay.jsx'
 import EducationalExperienceDisplay from './components/EducationalExperienceDisplay.jsx'
+import PracticalExperienceDisplay from './components/PracticalExperienceDisplay.jsx'
 
 function App() {
   //General information
@@ -68,6 +69,7 @@ function App() {
       <div className='parts'>
         <GeneralInformationDisplay generalInformation={generalInformation}/>
         <EducationalExperienceDisplay education={education}/>
+        <PracticalExperienceDisplay workExperience={workExperience}/>
       </div>
     </div>
     </>
