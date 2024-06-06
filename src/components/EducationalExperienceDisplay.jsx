@@ -1,9 +1,14 @@
-function EducationalExperienceDisplay({education}) {
+function EducationalExperienceDisplay({formations}) {
     return (
         <>
-            <h3>Education</h3>
-            <p>{education.titleOfStudy}</p>
-            <p>{education.schoolName + " " + education.year}</p>
+            <ul>
+                {formations.map(item => (
+                    <>
+                        <li>{item.titleOfStudy}</li>
+                        <p>{item.schoolName + " - " + item.year} </p>
+                    </>
+                ))}
+            </ul>
         </>
     )
 }
