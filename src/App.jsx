@@ -15,6 +15,7 @@ function App() {
   //Ajouter un nouvel objet formation
   const addFormation = () => {
     setFormations([...formations, education])
+    resetEducation()
   }
 
   //Tableau de stockage des expériences pro
@@ -23,6 +24,7 @@ function App() {
   //Ajouter un nouvel obejt workExperience
   const addWorkExperience = () => {
     setWorkExperiences([...workExperiences, workExperience])
+    resetWorkExperience()
   }
 
   //General information
@@ -51,6 +53,24 @@ function App() {
     year:""
 })
 
+  const resetEducation = () => {
+    setEducation({
+      titleOfStudy: '',
+      schoolName: '',
+      year: ''
+    });
+  };
+
+  const resetWorkExperience = () => {
+    setWorkExperience({
+      positionTitle:"",
+    company:"",
+    tasks:"",
+    startYear:"",
+    endYear:""
+    })
+  }
+
   //fonction de gestion de changement
   const handleChange = (field, value) => {
     setEducation(prevState => ({
@@ -73,6 +93,8 @@ function App() {
     }))
   }
 
+  
+
 
   return (
     <>
@@ -87,9 +109,9 @@ function App() {
       </div>
       <div className='parts'>
         <GeneralInformationDisplay generalInformation={generalInformation}/>
-        <h3>Education et formation</h3>
+        <h2>Education et formation</h2>
         <EducationalExperienceDisplay formations={formations}/>
-        <h3>Expériences professionnelles</h3>
+        <h2>Expériences professionnelles</h2>
         <PracticalExperienceDisplay workExperiences={workExperiences}/>
       </div>
     </div>
