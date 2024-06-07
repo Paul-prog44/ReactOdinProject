@@ -116,9 +116,9 @@ function App() {
       <div className='parts'>
         <GeneralInformationDisplay generalInformation={generalInformation}/>
         <h2>Education et formation</h2>
-        <EducationalExperienceDisplay formations={formations}/>
+        <EducationalExperienceDisplay formations={formations} setFormations={setFormations}/>
         <h2>Expériences professionnelles</h2>
-        <PracticalExperienceDisplay workExperiences={workExperiences}/>
+        <PracticalExperienceDisplay workExperiences={workExperiences} setWorkExperiences={setWorkExperiences}/>
       </div>
     </div>
     </>
