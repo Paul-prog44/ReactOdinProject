@@ -7,6 +7,8 @@ import PracticalExperience from './components/PracticalExperience.jsx'
 import GeneralInformationDisplay from './components/GeneralInformationDisplay.jsx'
 import EducationalExperienceDisplay from './components/EducationalExperienceDisplay.jsx'
 import PracticalExperienceDisplay from './components/PracticalExperienceDisplay.jsx'
+import { v4 as uuidv4 } from 'uuid';
+
 
 function App() {
   //Tableau de stockage des formations
@@ -43,14 +45,16 @@ function App() {
     company:"",
     tasks:"",
     startYear:"",
-    endYear:""
+    endYear:"",
+    id:uuidv4()
 })
 
   //Education
   const [education, setEducation] = useState({
     titleOfStudy:"",
     schoolName:"",
-    year:""
+    year:"",
+    id:uuidv4()
 })
 
   const resetEducation = () => {
@@ -64,10 +68,10 @@ function App() {
   const resetWorkExperience = () => {
     setWorkExperience({
       positionTitle:"",
-    company:"",
-    tasks:"",
-    startYear:"",
-    endYear:""
+      company:"",
+      tasks:"",
+      startYear:"",
+      endYear:""
     })
   }
 
@@ -75,7 +79,8 @@ function App() {
   const handleChange = (field, value) => {
     setEducation(prevState => ({
         ...prevState,
-        [field]:value
+        [field]:value,
+        id:uuidv4()
     }))
   }
 
@@ -89,7 +94,8 @@ function App() {
   const handleChangeExperience = (field, value) => {
     setWorkExperience(prevState => ({
         ...prevState,
-        [field]:value
+        [field]:value,
+        id:uuidv4()
     }))
   }
 

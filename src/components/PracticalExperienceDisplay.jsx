@@ -1,18 +1,15 @@
 function PracticalExperienceDisplay({workExperiences}) {
     return (
-        <>
-            <ul>
-                {workExperiences.map(item => (
-                    <>
-                        <li>{item.positionTitle}</li>
-                        <p>{item.company}</p>
-                        <p>{item.startYear + " - " + item.endYear}</p>
-                        <p>{item.tasks}</p>
-                    </>
-                ))}
-           </ul>
+        <ul>
+            {workExperiences.map(item => (
+                <li key={item.id}>{item.positionTitle}
+                    <p>{item.company}</p>
+                    <p>{item.startYear + " - " + item.endYear}</p>
+                    <p>{item.tasks}</p>
+                </li>
+            ))}
+        </ul>
 
-        </>
     )
 }
 

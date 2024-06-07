@@ -3,10 +3,10 @@ function EducationalExperienceDisplay({formations}) {
         <>
             <ul>
                 {formations.map(item => (
-                    <>
-                        <li>{item.titleOfStudy}</li>
-                        <p>{item.schoolName + " - " + item.year} </p>
-                    </>
+                        <li key={item.id}>
+                            {item.titleOfStudy}
+                            <p>{item.schoolName + " - " + item.year} </p>
+                        </li>
                 ))}
             </ul>
         </>
